@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+
+# VS Code
+.vscode/
+
+# MacOS
+.DS_Store
+
+# Environment
+.env
+.venv/
+venv/
+
+# Test and coverage
+.coverage
+htmlcov/
+.tox/
+
+# Logs
+*.log
+
+# Bluesky/ophyd
+*.h5
+*.nxs
+
+# Misc
+*.bak
+*.swp
+*.tmp
