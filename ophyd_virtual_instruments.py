@@ -37,13 +37,11 @@ class BasicVirtualDetector(Device):
     
     # Primary reading - what gets recorded in each measurement
     intensity = Cpt(SynSignal, kind=Kind.normal)
-    
     # Configuration - recorded once per scan
-    exposure_time = Cpt(SynSignal, kind=Kind.config, value=1.0)
-    gain = Cpt(SynSignal, kind=Kind.config, value=1.0)
-    
+    exposure_time = Cpt(SynSignal, kind=Kind.config)
+    gain = Cpt(SynSignal, kind=Kind.config)
     # Hint - suggests this is the primary quantity of interest
-    intensity.kind = Kind.hinted
+    # (set in __init__)
     
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -51,6 +49,7 @@ class BasicVirtualDetector(Device):
         self.intensity.put(1000)
         self.exposure_time.put(1.0)
         self.gain.put(1.0)
+        self.intensity.kind = Kind.hinted
     
     def trigger(self):
         """
@@ -86,20 +85,23 @@ class VirtualTemperatureController(Device):
     """
     
     # Current temperature (read-only)
-    temperature = Cpt(SynSignal, kind=Kind.hinted, value=20.0)
-    
+    temperature = Cpt(SynSignal, kind=Kind.hinted)
     # Setpoint (what we want the temperature to be)
-    setpoint = Cpt(SynSignal, kind=Kind.normal, value=20.0)
-    
+    setpoint = Cpt(SynSignal, kind=Kind.normal)
     # Configuration parameters
-    heating_rate = Cpt(SynSignal, kind=Kind.config, value=5.0)  # deg/min
-    cooling_rate = Cpt(SynSignal, kind=Kind.config, value=3.0)  # deg/min
-    tolerance = Cpt(SynSignal, kind=Kind.config, value=0.1)     # deg
+    heating_rate = Cpt(SynSignal, kind=Kind.config)  # deg/min
+    cooling_rate = Cpt(SynSignal, kind=Kind.config)  # deg/min
+    tolerance = Cpt(SynSignal, kind=Kind.config)     # deg
     
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self._target_temp = 20.0
         self._last_update = time.time()
+        self.temperature.put(20.0)
+        self.setpoint.put(20.0)
+        self.heating_rate.put(5.0)
+        self.cooling_rate.put(3.0)
+        self.tolerance.put(0.1)
     
     def set(self, value):
         """
@@ -177,20 +179,23 @@ class VirtualSpectrometer(Device):
     """
     
     # Spectrometer settings
-    integration_time = Cpt(SynSignal, kind=Kind.config, value=0.1)
-    wavelength_min = Cpt(SynSignal, kind=Kind.config, value=400)
-    wavelength_max = Cpt(SynSignal, kind=Kind.config, value=700)
-    num_pixels = Cpt(SynSignal, kind=Kind.config, value=1024)
-    
+    integration_time = Cpt(SynSignal, kind=Kind.config)
+    wavelength_min = Cpt(SynSignal, kind=Kind.config)
+    wavelength_max = Cpt(SynSignal, kind=Kind.config)
+    num_pixels = Cpt(SynSignal, kind=Kind.config)
     # Output data
     spectrum = Cpt(SynSignal, kind=Kind.normal)
     wavelengths = Cpt(SynSignal, kind=Kind.normal)
-    
     # Status indicators
-    temperature = Cpt(SynSignal, kind=Kind.normal, value=25.0)
+    temperature = Cpt(SynSignal, kind=Kind.normal)
     
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
+        self.integration_time.put(0.1)
+        self.wavelength_min.put(400)
+        self.wavelength_max.put(700)
+        self.num_pixels.put(1024)
+        self.temperature.put(25.0)
         self._generate_wavelength_array()
         self._generate_initial_spectrum()
     
