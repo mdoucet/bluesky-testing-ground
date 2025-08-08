@@ -1,0 +1,264 @@
+<!-- "Beamline" Configuration for HFIR TAX/HB3 -->
+<beamline>
+
+    <info>
+        <name>HB3</name>
+        <description>Neutronics Experiments</description>
+    </info>
+
+    <devices>
+
+        <device active="HB3:CS:IOC:IPTS:ACTIVE">
+            <name>hb3-IPTS</name>
+            <pv><name>HB3:CS:ITEMS</name><alias>SampleId</alias></pv>
+            <pv><name>HB3:CS:ITEMS:Name</name><alias>SampleName</alias></pv>
+            <pv><name>HB3:CS:ITEMS:Description</name><alias>SampleDescription</alias></pv>
+            <pv><name>HB3:CS:ITEMS:Formula</name><alias>SampleFormula</alias></pv>
+            <pv><name>HB3:CS:ITEMS:Container</name><alias>SampleContainer</alias></pv>
+            <pv><name>HB3:CS:ITEMS:Nature</name><alias>SampleNature</alias></pv>
+            <pv><name>HB3:CS:ITEMS:Comments</name><alias>SampleComments</alias></pv>
+            <pv><name>HB3:CS:ITEMS:Mass</name><alias>SampleMass</alias></pv>
+            <pv><name>HB3:CS:ITEMS:MassUnits</name></pv>
+            <pv><name>HB3:CS:ITEMS:Density</name><alias>SampleDensity</alias></pv>
+            <pv><name>HB3:CS:ITEMS:DensityUnits</name></pv>
+            <pv><name>HB3:CS:ITEMS:ContainerId</name></pv>
+            <pv><name>HB3:CS:ITEMS:Component</name></pv>
+            <pv><name>HB3:CS:ITEMS:CanIndicator</name></pv>
+            <pv><name>HB3:CS:ITEMS:CanBarcode</name></pv>
+            <pv><name>HB3:CS:ITEMS:CanName</name></pv>
+            <pv><name>HB3:CS:ITEMS:CanMaterials</name></pv>
+            <pv><name>HB3:CS:ITEMS:HeightInContainer</name></pv>
+            <pv><name>HB3:CS:ITEMS:HeightInContainerUnits</name></pv>
+            <pv><name>HB3:CS:ITEMS:InteriorDiameter</name></pv>
+            <pv><name>HB3:CS:ITEMS:InteriorDiameterUnits</name></pv>
+            <pv><name>HB3:CS:ITEMS:InteriorHeight</name></pv>
+            <pv><name>HB3:CS:ITEMS:InteriorHeightUnits</name></pv>
+            <pv><name>HB3:CS:ITEMS:InteriorWidth</name></pv>
+            <pv><name>HB3:CS:ITEMS:InteriorWidthUnits</name></pv>
+            <pv><name>HB3:CS:ITEMS:InteriorDepth</name></pv>
+            <pv><name>HB3:CS:ITEMS:InteriorDepthUnits</name></pv>
+            <pv><name>HB3:CS:ITEMS:OuterDiameter</name></pv>
+            <pv><name>HB3:CS:ITEMS:OuterDiameterUnits</name></pv>
+            <pv><name>HB3:CS:ITEMS:OuterHeight</name></pv>
+            <pv><name>HB3:CS:ITEMS:OuterHeightUnits</name></pv>
+            <pv><name>HB3:CS:ITEMS:OuterWidth</name></pv>
+            <pv><name>HB3:CS:ITEMS:OuterWidthUnits</name></pv>
+            <pv><name>HB3:CS:ITEMS:OuterDepth</name></pv>
+            <pv><name>HB3:CS:ITEMS:OuterDepthUnits</name></pv>
+            <pv><name>HB3:CS:ITEMS:VolumeCubic</name></pv>
+            <pv><name>HB3:CS:ITEMS:VolumeCubicUnits</name></pv>
+            <pv><name>HB3:CS:ITEMS:LatticeA</name></pv>
+            <pv><name>HB3:CS:ITEMS:LatticeB</name></pv>
+            <pv><name>HB3:CS:ITEMS:LatticeC</name></pv>
+            <pv><name>HB3:CS:ITEMS:LatticeAlpha</name></pv>
+            <pv><name>HB3:CS:ITEMS:LatticeBeta</name></pv>
+            <pv><name>HB3:CS:ITEMS:LatticeGamma</name></pv>
+            <pv><name>HB3:CS:ITEMS:SampleLength</name></pv>
+            <pv><name>HB3:CS:ITEMS:SampleWidth</name></pv>
+            <pv><name>HB3:CS:ITEMS:SampleHeight</name></pv>
+            <pv><name>HB3:CS:ITEMS:SpaceGroup</name></pv>
+            <pv><name>HB3:CS:ITEMS:Z</name><alias>NumberOfFormulaUnits</alias></pv>
+            <pv><name>HB3:CS:IPTS:Members</name><alias>Users</alias></pv>
+            <pv><name>HB3:CS:IPTS:Contact</name><alias>LocalContact</alias></pv>
+        </device>
+
+        <device active="HB3:CS:IOC:Galil2:ACTIVE">
+            <name>hb3-Galil2</name>
+            <pv><name>HB3:Mot:mcrystal:Position</name><alias>monochromator</alias></pv>
+            <pv><name>HB3:Mot:m1.RBV</name><alias>m1</alias></pv>
+            <pv><name>HB3:Mot:m2.RBV</name><alias>m2</alias></pv>
+            <pv><name>HB3:Mot:marc.RBV</name><alias>marc</alias></pv>
+            <pv><name>HB3:Mot:mcrystal.RBV</name><alias>mcrystal</alias></pv>
+            <pv><name>HB3:Mot:mtrans.RBV</name><alias>mtrans</alias></pv>
+            <pv><name>HB3:Mot:mfocus.RBV</name><alias>mfocus</alias></pv>
+        </device>
+
+        <device active="HB3:CS:IOC:TASUBMatSettings:ACTIVE">
+            <name>hb3-TASUBMatSettings</name>
+            <pv><name>HB3:TASUBMatSet:LatticeA</name><alias>lattice_a</alias></pv>
+            <pv><name>HB3:TASUBMatSet:LatticeB</name><alias>lattice_b</alias></pv>
+            <pv><name>HB3:TASUBMatSet:LatticeC</name><alias>lattice_c</alias></pv>
+            <pv><name>HB3:TASUBMatSet:LatticeAlpha</name><alias>lattice_alpha</alias></pv>
+            <pv><name>HB3:TASUBMatSet:LatticeBeta</name><alias>lattice_beta</alias></pv>
+            <pv><name>HB3:TASUBMatSet:LatticeGamma</name><alias>lattice_gamma</alias></pv>
+            <pv><name>HB3:TASUBMatSet:PlaneNormal</name><alias>plane_normal</alias></pv>
+            <pv><name>HB3:TASUBMatSet:PlaneNormal1</name><alias>plane_normal_h</alias></pv>
+            <pv><name>HB3:TASUBMatSet:PlaneNormal2</name><alias>plane_normal_k</alias></pv>
+            <pv><name>HB3:TASUBMatSet:PlaneNormal3</name><alias>plane_normal_l</alias></pv>
+            <pv><name>HB3:TASUBMatSet:PlusMinusM</name><alias>plus_minus_monochromator</alias></pv>
+            <pv><name>HB3:TASUBMatSet:PlusMinusS</name><alias>plus_minus_sample</alias></pv>
+            <pv><name>HB3:TASUBMatSet:PlusMinusA</name><alias>plus_minus_analyzer</alias></pv>
+            <pv><name>HB3:TASUBMatSet:MonochromatorDSpacing</name><alias>monochromator_d_spacing</alias></pv>
+            <pv><name>HB3:TASUBMatSet:UBMatrixR1C1</name><alias>UBMatrixR1C1</alias></pv>
+            <pv><name>HB3:TASUBMatSet:UBMatrixR1C2</name><alias>UBMatrixR1C2</alias></pv>
+            <pv><name>HB3:TASUBMatSet:UBMatrixR1C3</name><alias>UBMatrixR1C3</alias></pv>
+            <pv><name>HB3:TASUBMatSet:UBMatrixR2C1</name><alias>UBMatrixR2C1</alias></pv>
+            <pv><name>HB3:TASUBMatSet:UBMatrixR2C2</name><alias>UBMatrixR2C2</alias></pv>
+            <pv><name>HB3:TASUBMatSet:UBMatrixR2C3</name><alias>UBMatrixR2C3</alias></pv>
+            <pv><name>HB3:TASUBMatSet:UBMatrixR3C1</name><alias>UBMatrixR3C1</alias></pv>
+            <pv><name>HB3:TASUBMatSet:UBMatrixR3C2</name><alias>UBMatrixR3C2</alias></pv>
+            <pv><name>HB3:TASUBMatSet:UBMatrixR3C3</name><alias>UBMatrixR3C3</alias></pv>
+            <pv><name>HB3:TASUBMatSet:AngleMode</name><alias>angle_mode</alias></pv>
+            <pv><name>HB3:TASUBMatSet:AngleModeStr</name><alias>angle_mode_str</alias></pv>
+            <pv><name>HB3:TASUBMatSet:UBCalcMode</name><alias>ub_calc_mode</alias></pv>
+            <pv><name>HB3:TASUBMatSet:UBCalcModeStr</name><alias>ub_calc_mode_str</alias></pv>
+            <pv><name>HB3:TASUBMatSet:CurConfigPath</name><alias>settings_config_path</alias></pv>
+            <pv><name>HB3:TASUBMatSet:MCUScaleFactor</name><alias>mcu_scale_factor</alias></pv>
+            <pv><name>HB3:TASUBMatSet:FixedEnergyMode</name><alias>fixed_energy_mode</alias></pv>
+            <pv><name>HB3:TASUBMatSet:FixedEnergy</name><alias>fixed_energy</alias></pv>
+        </device>
+
+        <device active="HB3:CS:IOC:ADnED:ACTIVE">
+            <name>hb3-Det-ADnED</name>
+            <pv><name>HB3:Det:N1:Det1:EventTotal_RBV</name><alias>det</alias></pv>
+            <pv><name>HB3:Det:N1:Det2:EventTotal_RBV</name><alias>monitor</alias></pv>
+            <pv><name>HB3:Det:N1:AcquireTimer_RBV</name><alias>time_adned</alias></pv>
+            <pv><name>HB3:Det:N1:ISAcquireTimer</name><alias>time</alias></pv>
+            <pv><name>HB3:Det:N1:InternalStopMode</name><alias>acq_main_stop_mode</alias></pv>
+            <pv><name>HB3:Det:N1:InternalStopThreshold</name><alias>acq_main_stop_threshold</alias></pv>
+            <pv><name>HB3:Det:N1:DoneCounting</name><alias>acq_main_done_counting</alias></pv>
+            <pv><name>HB3:Det:N1:ISDetector</name><alias>acq_cnt_selector</alias></pv>
+        </device>
+
+        <!-- Temporary Set of Virtual Motor PVs for Graffiti Testing -->
+        <device active="HB3:CS:IOC:TASUBMatrixAxes:ACTIVE">
+            <name>hb3-TASUBMatrixAxes</name>
+            <pv><name>HB3:Mot:m1v.RBV</name><alias>m1v</alias></pv>
+            <pv><name>HB3:Mot:m2v.RBV</name><alias>m2v</alias></pv>
+            <pv><name>HB3:Mot:s1v.RBV</name><alias>s1</alias></pv>
+            <pv><name>HB3:Mot:s2v.RBV</name><alias>s2</alias></pv>
+            <pv><name>HB3:Mot:a1v.RBV</name><alias>a1</alias></pv>
+            <pv><name>HB3:Mot:a2v.RBV</name><alias>a2</alias></pv>
+            <pv><name>HB3:Mot:sglv.RBV</name><alias>sgl</alias></pv>
+            <pv><name>HB3:Mot:sguv.RBV</name><alias>sgu</alias></pv>
+            <pv><name>HB3:Mot:eip</name><alias>ei</alias></pv>
+            <pv><name>HB3:Mot:efp</name><alias>ef</alias></pv>
+            <pv><name>HB3:Mot:ep</name><alias>e</alias></pv>
+            <pv><name>HB3:Mot:hp</name><alias>h</alias></pv>
+            <pv><name>HB3:Mot:kp</name><alias>k</alias></pv>
+            <pv><name>HB3:Mot:lp</name><alias>l</alias></pv>
+            <pv><name>HB3:Mot:qp</name><alias>q</alias></pv>
+        </device>
+
+        <device active="HB3:CS:IOC:Galil3:ACTIVE">
+            <name>hb3-Galil3</name>
+            <!-- Slit axes, Incident beam slits -->
+            <pv><name>HB3:Mot:ba:X:Center</name><alias>ba_xcen</alias></pv>
+            <pv><name>HB3:Mot:ba:X:Gap</name><alias>ba_xgap</alias></pv>
+            <pv><name>HB3:Mot:ba:Y:Center</name><alias>ba_ycen</alias></pv>
+            <pv><name>HB3:Mot:ba:Y:Gap</name><alias>ba_ygap</alias></pv>
+            <pv><name>HB3:Mot:bal</name><alias>bal</alias></pv>
+            <pv><name>HB3:Mot:bar</name><alias>bar</alias></pv>
+            <pv><name>HB3:Mot:bab</name><alias>bab</alias></pv>
+            <pv><name>HB3:Mot:bat</name><alias>bat</alias></pv>
+            <!-- Diffracted beam slits -->
+            <pv><name>HB3:Mot:bb:X:Center</name><alias>bb_xcen</alias></pv>
+            <pv><name>HB3:Mot:bb:X:Gap</name><alias>bb_xgap</alias></pv>
+            <pv><name>HB3:Mot:bb:Y:Center</name><alias>bb_ycen</alias></pv>
+            <pv><name>HB3:Mot:bb:Y:Gap</name><alias>bb_ygap</alias></pv>
+            <pv><name>HB3:Mot:bbl</name><alias>bbl</alias></pv>
+            <pv><name>HB3:Mot:bbr</name><alias>bbr</alias></pv>
+            <pv><name>HB3:Mot:bbb</name><alias>bbb</alias></pv>
+            <pv><name>HB3:Mot:bbt</name><alias>bbt</alias></pv>
+        </device>
+
+        <device active="HB3:CS:IOC:TASCommands:ACTIVE">
+            <name>hb3-TASCommands</name>
+            <!-- <pv><name>HB3:TASCommands:MCUCounts</name><alias>mcu</alias></pv> -->
+            <pv><name>HB3:TASCommands:AcqSimMainISAcquireTimer</name><alias>time_sim</alias></pv>
+            <pv><name>HB3:TASCommands:AcqSimDetEventTotal_RBV</name><alias>det_sim</alias></pv>
+            <pv><name>HB3:TASCommands:AcqSimMonEventTotal_RBV</name><alias>monitor_sim</alias></pv>
+            <pv><name>HB3:TASCommands:SimMCUCounts</name><alias>mcu_sim</alias></pv>
+            <pv><name>HB3:Det:M1:InternalStopMode</name><alias>acq_meta_stop_mode</alias></pv>
+            <pv><name>HB3:Det:M1:InternalStopThreshold</name><alias>acq_meta_stop_threshold</alias></pv>
+            <pv><name>HB3:Det:M1:DoneCounting</name><alias>acq_meta_done_counting</alias></pv>
+            <pv><name>HB3:TASCommands:AcqSimMainStopMode</name><alias>acq_main_stop_mode_sim</alias></pv>
+            <pv><name>HB3:TASCommands:AcqSimMainStopThreshold</name><alias>acq_main_stop_threshold_sim</alias></pv>
+            <pv><name>HB3:TASCommands:AcqSimMainDoneCounting</name><alias>acq_main_done_counting_sim</alias></pv>
+            <pv><name>HB3:TASCommands:AcqSimMetaStopMode</name><alias>acq_meta_stop_mode_sim</alias></pv>
+            <pv><name>HB3:TASCommands:AcqSimMetaStopThreshold</name><alias>acq_meta_stop_threshold_sim</alias></pv>
+            <pv><name>HB3:TASCommands:AcqSimMetaDoneCounting</name><alias>acq_meta_done_counting_sim</alias></pv>
+            <pv><name>HB3:TASCommands:AcqSimCountSelector</name><alias>acq_cnt_selector_sim</alias></pv>
+        </device>
+
+        <device active="HB3:CS:IOC:HighLevel:ACTIVE">
+            <name>hb3-HighLevel</name>
+            <pv><name>HB3:TASCount:CalcMCU</name><alias>mcu</alias></pv>
+        </device>
+
+        <device active="HB3:CS:IOC:TASMeasure:ACTIVE">
+            <name>hb3-TASMeasure</name>
+            <pv><name>HB3:TASMeasure:CurMeasureCommand</name><alias>measure_cur_cmd</alias></pv>
+            <pv><name>HB3:TASMeasure:CurMeasureTitle</name><alias>measure_cur_title</alias></pv>
+            <pv><name>HB3:TASMeasure:CurFitMotor</name><alias>measure_cur_fit_mot</alias></pv>
+            <pv><name>HB3:TASMeasure:CurFitStart</name><alias>measure_cur_fit_start</alias></pv>
+            <pv><name>HB3:TASMeasure:CurFitEnd</name><alias>measure_cur_fit_end</alias></pv>
+            <pv><name>HB3:TASMeasure:CurFitStep</name><alias>measure_cur_fit_step</alias></pv>
+            <pv><name>HB3:TASMeasure:CurCounter</name><alias>measure_cur_counter</alias></pv>
+            <pv><name>HB3:TASMeasure:CurCounts</name><alias>measure_cur_counts</alias></pv>
+            <pv><name>HB3:TASMeasure:CurDetector</name><alias>measure_cur_detector</alias></pv>
+            <pv><name>HB3:TASMeasure:CurRunMode</name><alias>measure_cur_run_mode</alias></pv>
+            <pv><name>HB3:TASMeasure:CurNormalize</name><alias>measure_cur_normalize</alias></pv>
+            <pv><name>HB3:TASMeasure:CurFitMethod</name><alias>measure_cur_fit_method</alias></pv>
+            <pv><name>HB3:TASMeasure:CurCheckFit</name><alias>measure_cur_check_fit</alias></pv>
+            <pv><name>HB3:TASMeasure:CurFitRestrict</name><alias>measure_cur_fit_restriction</alias></pv>
+            <pv><name>HB3:TASMeasure:CurMoveToCenter</name><alias>measure_cur_fit_move_to_center</alias></pv>
+            <pv><name>HB3:TASMeasure:Counter</name><alias>measure_condition_counter</alias></pv>
+            <pv><name>HB3:TASMeasure:Counts</name><alias>measure_condition_increment</alias></pv>
+            <pv><name>HB3:TASMeasure:Detector</name><alias>measure_detector</alias></pv>
+            <pv><name>HB3:TASMeasure:RunMode</name><alias>measure_run_mode</alias></pv>
+            <pv><name>HB3:TASMeasure:Normalize</name><alias>measure_normalize</alias></pv>
+            <pv><name>HB3:TASMeasure:CheckFit</name><alias>measure_check_fit</alias></pv>
+            <pv><name>HB3:TASMeasure:MoveToCenter</name><alias>measure_move_to_center</alias></pv>
+            <pv><name>HB3:TASMeasure:MoveToMarker</name><alias>measure_move_to_marker</alias></pv>
+            <pv><name>HB3:TASMeasure:Fit:Mark:Xmin</name><alias>measure_fit_x_min</alias></pv>
+            <pv><name>HB3:TASMeasure:Fit:Mark:Xmax</name><alias>measure_fit_x_max</alias></pv>
+            <pv><name>HB3:TASMeasure:Fit:Pos</name><alias>measure_fit_pos</alias></pv>
+            <pv><name>HB3:TASMeasure:Fit:Wid</name><alias>measure_fit_width</alias></pv>
+            <pv><name>HB3:TASMeasure:Fit:Base</name><alias>measure_fit_base</alias></pv>
+            <pv><name>HB3:TASMeasure:Fit:Amp</name><alias>measure_fit_amplitude</alias></pv>
+            <!-- pv><name>HB3:TASMeasure:Run</name><alias>measure_run</alias></pv -->
+            <pv><name>HB3:TASMeasure:ForceEnd</name><alias>measure_force_end</alias></pv>
+            <pv><name>HB3:TASMeasure:Stat</name><alias>measure_status</alias></pv>
+            <pv><name>HB3:TASMeasure:Fit:Data:X</name><alias>measure_data_x</alias></pv>
+            <pv><name>HB3:TASMeasure:Fit:Data:Y</name><alias>measure_data_y</alias></pv>
+            <pv><name>HB3:TASMeasure:DoPrologue</name><alias>measure_prologue</alias></pv>
+            <pv><name>HB3:TASMeasure:DoEpilogue</name><alias>measure_epilogue</alias></pv>
+            <pv><name>HB3:TASMeasure:ScanID</name><alias>measure_scan_id</alias></pv>
+            <pv><name>HB3:TASMeasure:ScanDevicesEncoded</name><alias>measure_scan_devices</alias></pv>
+            <pv><name>HB3:TASMeasure:DefaultXChannel</name><alias>def_x</alias></pv>
+            <pv><name>HB3:TASMeasure:DefaultYChannel</name><alias>def_y</alias></pv>
+        </device>
+
+        <device active="HB3:CS:IOC:CCR:ACTIVE">
+            <name>SE-CCR</name>
+            <pv><name>HB3:SE:CCR:MS:SETP_S</name><alias>ccr_temp</alias></pv>
+            <pv><name>HB3:SE:CCR:SAMPLE_TEMP</name><alias>ccr_temp_rbv</alias></pv>
+        </device>
+
+        <!-- NOTE: REMOVE "def_x" and "def_y" ALIASES WHEN REAL PVs...!! -->
+        <device active="HB3:CS:IOC:Graffiti:ACTIVE">
+            <name>hb3-Graffiti</name>
+            <pv><name>HB3:CS:Graffiti:Generate</name></pv>
+            <!-- REMOVE PVList, ExpNum, Def_X and Def_y for now...
+            <pv><name>HB3:CS:Graffiti:PVList</name></pv>
+            <pv><name>HB3:CS:Graffiti:ExpNum</name><alias>ExpNum</alias></pv>
+            <pv><name>HB3:CS:Graffiti:Def_X</name><alias>def_x_dummy</alias></pv>
+            <pv><name>HB3:CS:Graffiti:Def_Y</name><alias>def_y_dummy</alias></pv>
+             -->
+        </device>
+
+        <device active="HB3:CS:IOC:GraffitiPVs:ACTIVE">
+            <name>hb3-GraffitiPVs</name>
+            <pv><name>HB3:CS:GraffitiPVs:LIST</name></pv>
+        </device>
+
+        <device active="HB3:CS:IOC:MonitorPVs:ACTIVE">
+            <name>hb3-MonitorPVs</name>
+            <pv><name>HB3:CS:MonitorPVs:LIST</name></pv>
+        </device>
+
+    </devices>
+
+</beamline>
+
