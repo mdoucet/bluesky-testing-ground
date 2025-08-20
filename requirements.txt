@@ -4,3 +4,5 @@ numpy>=1.19.0
 matplotlib>=3.3.0
 pytest
 pyepics
+
+neutron-tavi>=0.3.0
